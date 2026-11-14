@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "@noble/hashes": "2.4.0",
+    "@qorechain/evm": "0.14.0",
+    "@qorechain/pqc": "0.2.3",
+    "@qorechain/qoreseal": "0.1.0",
+    "@qorechain/sdk": "0.14.0"
+  },
+  "description": "SealedMed Referral \u2014 post-quantum encrypted medical referrals & lab results between healthcare facilities. ML-KEM-1024 (QoreSeal) client-side encryption, ML-DSA-87 key binding and patient consent, hash-only receipts on QoreChain Diana.",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "^5.0.2",
+    "@types/node": "^22.0.0",
+    "ethers": "^6.13.0",
+    "hardhat": "^2.22.19",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0",
+    "viem": "^2.21.0"
+  },
+  "license": "MIT",
+  "name": "sealedmed-referral",
+  "private": true,
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy:diana": "hardhat run scripts/deploy.ts --network diana",
+    "register-kem": "node --import tsx scripts/register-kem-key.ts",
+    "test": "hardhat test && npm run test:core",
+    "test:contracts": "hardhat test",
+    "test:core": "node --import tsx --test src-core/test/*.test.ts"
+  },
+  "version": "1.0.0"
+}

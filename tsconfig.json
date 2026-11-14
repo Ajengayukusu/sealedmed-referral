@@ -1,0 +1,1 @@
+{"compilerOptions":{"esModuleInterop":true,"forceConsistentCasingInFileNames":true,"module":"commonjs","moduleResolution":"node","outDir":"dist","resolveJsonModule":true,"skipLibCheck":true,"strict":true,"target":"es2022","types":["node","hardhat"]},"exclude":["node_modules","frontend","src-core"],"include":["hardhat.config.ts","scripts/deploy.ts","test/**/*.ts"]}
