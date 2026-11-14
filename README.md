@@ -2,6 +2,8 @@
 
 [![Built on QoreChain](https://build.qorechain.io/badge/sealedmed-referral.svg)](https://build.qorechain.io/p/sealedmed-referral)
 
+**Live demo:** https://ajengayukusu.github.io/sealedmed-referral/
+
 > **Rujukan medis & hasil lab yang tetap rahasia selama puluhan tahun — dienkripsi
 > ML-KEM-1024 di browser, terikat ML-DSA-87, dengan receipt hash-only on-chain.**
 > Built for the **QoreChain Developer Fest "Build Before Q-Day"** — **Encrypted Apps** category.
@@ -31,9 +33,10 @@
    ```bash
    npm install && npm test
    ```
-4. **See it (60 s).** Run the demo — three roles (receiving doctor, sending
-   clinic, patient), and *every cryptographic step in the browser is real*,
-   using the same `src-core/` module the tests exercise:
+4. **See it (60 s).** Open the hosted demo at https://ajengayukusu.github.io/sealedmed-referral/
+   — three roles (receiving doctor, sending clinic, patient), and *every
+   cryptographic step in the browser is real*, using the same `src-core/`
+   module the tests exercise. Or run it locally:
    ```bash
    cd frontend && npm install && npm run dev   # http://localhost:5174
    ```
