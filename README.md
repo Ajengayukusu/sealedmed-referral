@@ -1,5 +1,7 @@
 # SealedMed Referral — Post-Quantum Encrypted Medical Referrals
 
+[![Built on QoreChain](https://build.qorechain.io/badge/sealedmed-referral.svg)](https://build.qorechain.io/p/sealedmed-referral)
+
 > **Rujukan medis & hasil lab yang tetap rahasia selama puluhan tahun — dienkripsi
 > ML-KEM-1024 di browser, terikat ML-DSA-87, dengan receipt hash-only on-chain.**
 > Built for the **QoreChain Developer Fest "Build Before Q-Day"** — **Encrypted Apps** category.

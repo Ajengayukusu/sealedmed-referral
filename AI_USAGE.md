@@ -76,9 +76,10 @@ what the human decided, and how every AI-generated artefact was verified.*
   the SDK's own type definitions).
 - `cd frontend && npm run build` — clean (tsc + vite production build;
   549 modules, the real QoreSeal/QoreSign/PQC code bundled).
-- No deployment, registration or submission was performed in this phase;
-  every live-phase artefact is marked *pending* in the README rather than
-  invented.
+- The live phase has since been executed and verified on chain: the
+  registry contract is deployed and the recipient KEM key is registered,
+  with every live artefact recorded in `deployments.testnet.json` and the
+  README — nothing was written down before it was proven on chain.
 
 ## Division of labour, in one line
 
