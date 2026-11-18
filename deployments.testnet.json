@@ -1,1 +1,204 @@
-{"address":"0x9aa1EF27d14F46e5Fbe399CE2402fDc0673b65C1","chainId":9800,"contract":"SealedMedRegistry","deployedAt":"2026-11-15","deployer":{"cosmos":"qor1dcse33ce3n3mwxxleuupqvfqeq6xl552zm2ltk","evm":"0x6E2198c7198Ce3B718DFCf38103120C8346fD28A","role":"clinic (sender)"},"evmBlocks":{"deploy":10087345,"logReferral":10087356,"registerRecipient":10087354},"evmRpc":"https://evm-testnet.qore.host","evmTxs":{"deploy":"0xdb0fe86a48dc330a6461f36be017a61fbc883ead7103f78ee13edb67588fc34e","logReferral":"0x2dcbc2cd43f031bdda9297d3666d6b127a534227485134a90a51b9c7fb62e723","registerRecipient":"0x965b2bf31f3ca7b72d13b460807be056e39886693d93202b992010a33ce2959d"},"network":"qorechain-diana","recipient":{"cosmos":"qor1359rgl28y45dldscnjzxqvcz6pz0qyrmjq488c","evm":"0x8d0A347d472568DfB6189c84603302d044F0107b","mldsa87":{"note":"Registered in an earlier phase; ensurePqcRegistered was a no-op in this run.","possessionProven":true,"registered":true},"mlkem1024":{"algorithmId":2,"algorithmName":"mlkem1024","block":10087351,"kemKeyHash":"0x0d239bda599b3be9bed2e7d29a6af4ad7eb8b626849770c18d7c143e1dde582f","publicKeyBytes":1568,"readBack":"GET /qorechain/pqc/v1/kem/<doctor> -> found:true, key byte-identical to the doctor's QoreSeal key","registerTxHash":"F528107596E50F0342C9ACD0527A75338BD331A8233023BB436214D925AB9772"},"recipientCard":{"cardHash":"0x1fbaa3c1ac2c369684b1f8ac9c50d3ac667605a26ec042fa69d7f5e7ff0f0df0","note":"Demo seal keys are derived deterministically from the foundation spike mnemonic with label 'sealedmed-doctor' (SHAKE-256 -> sealKeysFromSeed), held in memory only during the run; the seed was never written to any file.","verified":"signRecipientCard with the doctor's real account keys; verifyRecipientCard passed against the on-chain registered ML-DSA-87 + ML-KEM-1024 keys (openRecipient in src-core)"},"registryEntry":{"active":true,"cardHashOnChain":"0x1fbaa3c1ac2c369684b1f8ac9c50d3ac667605a26ec042fa69d7f5e7ff0f0df0","commitmentScheme":"sha256 (kemKeyCommitment / cardCommitment in src-core, as documented in README and the contract)","kemKeyHashOnChain":"0x0d239bda599b3be9bed2e7d29a6af4ad7eb8b626849770c18d7c143e1dde582f"},"role":"doctor (receiving facility)"},"referralDemo":{"consent":"Patient ML-DSA-87 signature (local demo keypair via @qorechain/pqc mldsa87, not a chain account) over doc+envelope hashes; verifyConsent passed before logging","consentId":"207dbc37-053f-4bb3-9831-480e6da89baa","consentIdHash":"0x089b16e86abe3491a4d2da65cbe7fe6a99efa468ad08fd518404a359b1fde49c","docHash":"0x7bd53e1c1130d8179d56fa757ea6a70da7be121f39363231f92ed1f80d858813","envelope":"QoreSeal hybrid (ML-KEM-1024 + X25519), chainId qorechain-diana, purpose sealedmed-referral","envelopeHash":"0xd28eb7a49ceeb60a4c7c07aa78130e1f1f1f5c4a3b148ae8b2ff8751391d93a6","fictional":true,"openVerification":"Doctor opened the envelope locally with its own seal keys; recovered plaintext is byte-identical to the original fictional document","patientAlias":"PASIEN FIKSI SM-001 — BUKAN DATA MEDIS ASLI","receiptId":0,"receiptsCount":1},"rest":"https://api-testnet.qore.host","status":"LIVE","windowsAfter":{"clinicIdx0":{"expiryHeight":10104065,"live":true,"usedTxs":"14/20"},"doctorIdx1":{"expiryHeight":10104268,"live":true,"usedTxs":"2/3"}}}
+{
+  "address": "0x9aa1EF27d14F46e5Fbe399CE2402fDc0673b65C1",
+  "chainId": 9800,
+  "contract": "SealedMedRegistry",
+  "deployedAt": "2026-11-15",
+  "deployer": {
+    "cosmos": "qor1dcse33ce3n3mwxxleuupqvfqeq6xl552zm2ltk",
+    "evm": "0x6E2198c7198Ce3B718DFCf38103120C8346fD28A",
+    "role": "clinic (sender)"
+  },
+  "evmBlocks": {
+    "deploy": 10087345,
+    "logReferral": 10087356,
+    "registerRecipient": 10087354
+  },
+  "evmRpc": "https://evm-testnet.qore.host",
+  "evmTxs": {
+    "deploy": "0xdb0fe86a48dc330a6461f36be017a61fbc883ead7103f78ee13edb67588fc34e",
+    "logReferral": "0x2dcbc2cd43f031bdda9297d3666d6b127a534227485134a90a51b9c7fb62e723",
+    "registerRecipient": "0x965b2bf31f3ca7b72d13b460807be056e39886693d93202b992010a33ce2959d"
+  },
+  "network": "qorechain-diana",
+  "recipient": {
+    "cosmos": "qor1359rgl28y45dldscnjzxqvcz6pz0qyrmjq488c",
+    "evm": "0x8d0A347d472568DfB6189c84603302d044F0107b",
+    "mldsa87": {
+      "note": "Registered in an earlier phase; ensurePqcRegistered was a no-op in this run.",
+      "possessionProven": true,
+      "registered": true
+    },
+    "mlkem1024": {
+      "algorithmId": 2,
+      "algorithmName": "mlkem1024",
+      "block": 10087351,
+      "kemKeyHash": "0x0d239bda599b3be9bed2e7d29a6af4ad7eb8b626849770c18d7c143e1dde582f",
+      "publicKeyBytes": 1568,
+      "readBack": "GET /qorechain/pqc/v1/kem/<doctor> -> found:true, key byte-identical to the doctor's QoreSeal key",
+      "registerTxHash": "F528107596E50F0342C9ACD0527A75338BD331A8233023BB436214D925AB9772"
+    },
+    "recipientCard": {
+      "cardHash": "0x1fbaa3c1ac2c369684b1f8ac9c50d3ac667605a26ec042fa69d7f5e7ff0f0df0",
+      "note": "Demo seal keys are derived deterministically from the foundation spike mnemonic with label 'sealedmed-doctor' (SHAKE-256 -> sealKeysFromSeed), held in memory only during the run; the seed was never written to any file.",
+      "verified": "signRecipientCard with the doctor's real account keys; verifyRecipientCard passed against the on-chain registered ML-DSA-87 + ML-KEM-1024 keys (openRecipient in src-core)"
+    },
+    "registryEntry": {
+      "active": true,
+      "cardHashOnChain": "0x1fbaa3c1ac2c369684b1f8ac9c50d3ac667605a26ec042fa69d7f5e7ff0f0df0",
+      "commitmentScheme": "sha256 (kemKeyCommitment / cardCommitment in src-core, as documented in README and the contract)",
+      "kemKeyHashOnChain": "0x0d239bda599b3be9bed2e7d29a6af4ad7eb8b626849770c18d7c143e1dde582f"
+    },
+    "role": "doctor (receiving facility)"
+  },
+  "referralDemo": {
+    "consent": "Patient ML-DSA-87 signature (local demo keypair via @qorechain/pqc mldsa87, not a chain account) over doc+envelope hashes; verifyConsent passed before logging",
+    "consentId": "207dbc37-053f-4bb3-9831-480e6da89baa",
+    "consentIdHash": "0x089b16e86abe3491a4d2da65cbe7fe6a99efa468ad08fd518404a359b1fde49c",
+    "docHash": "0x7bd53e1c1130d8179d56fa757ea6a70da7be121f39363231f92ed1f80d858813",
+    "envelope": "QoreSeal hybrid (ML-KEM-1024 + X25519), chainId qorechain-diana, purpose sealedmed-referral",
+    "envelopeHash": "0xd28eb7a49ceeb60a4c7c07aa78130e1f1f1f5c4a3b148ae8b2ff8751391d93a6",
+    "fictional": true,
+    "openVerification": "Doctor opened the envelope locally with its own seal keys; recovered plaintext is byte-identical to the original fictional document",
+    "patientAlias": "PASIEN FIKSI SM-001 \u2014 BUKAN DATA MEDIS ASLI",
+    "receiptId": 0,
+    "receiptsCount": 1
+  },
+  "rest": "https://api-testnet.qore.host",
+  "status": "LIVE",
+  "windowsAfter": {
+    "clinicIdx0": {
+      "expiryHeight": 10104065,
+      "live": true,
+      "usedTxs": "14/20"
+    },
+    "doctorIdx1": {
+      "expiryHeight": 10104268,
+      "live": true,
+      "usedTxs": "2/3"
+    }
+  },
+  "receiptsCountTotal": 5,
+  "evidenceDeepening2026-11-19": {
+    "purpose": "Deepen the on-chain footprint: four additional genuine referral cycles through the live registry, each from a different sending clinic account. All documents FICTIONAL and labelled FIKSI in the document itself.",
+    "date": "2026-11-19",
+    "recipientBindingProof": "Before every cycle, the doctor's QoreSeal keys were recovered deterministically from the foundation spike mnemonic (SHAKE-256 label 'sealedmed-doctor|' -> sealKeysFromSeed) and proven to be the registered keys: byte-identical to GET /qorechain/pqc/v1/kem/qor1359rgl28y45dldscnjzxqvcz6pz0qyrmjq488c (1568 bytes, algorithmId 2) AND sha256(publicKey) == the SealedMedRegistry on-chain kemKeyHash commitment. Envelopes were sealed with src-core sealReferral (QoreSeal hybrid ML-KEM-1024 + X25519); the recipient-card verification (openRecipient) was executed in the original 15 Nov run and recorded there; these cycles bind the recipient directly against chain state.",
+    "senderPreparation": [
+      {
+        "index": 2,
+        "cosmos": "qor197ja9nv35em87saqfega0re36cadfdrjemgcn2",
+        "evm": "0x2fA5d2CD91A6767f43A04e51d78F31D63AD4b472",
+        "fundTxHash": "84C50004AE1487E98CC099B2A4BCA17B690500C056505C8C5C7D474DADAB5256",
+        "fundAmount": "5 QOR from clinic idx0 (hybrid)",
+        "registerPqcTxHash": "2FE19812E2CD7C00A3C4079AD463504F4BBEA8FC34438EC766587C464D14613F",
+        "openWindowTxHash": "42AE2EEA2D8941768F60D8E5ADE820A3ACAB7256839945947B9A72FCB6F5C0B9",
+        "windowExpiryHeight": 10351262
+      },
+      {
+        "index": 3,
+        "cosmos": "qor1y5rrnzllmsd3xvfgkvz50l9508k9pa0h932fzw",
+        "evm": "0x2506398BFFdC1B133128b30547fCb479EC50f5f7",
+        "fundTxHash": "F6A4F95F4C418888DFF0DD4403195620907B5F22D351D5AE51D4FE30C74FA5F8",
+        "fundAmount": "5 QOR from clinic idx0 (hybrid)",
+        "registerPqcTxHash": "0CABA4D8510B295DD75875BADCF6B53A38A52754D7C631023DE551263ABA30D0",
+        "openWindowTxHash": "3F737BC094B2E0182A028F0B8336303AC1B17D5DC6FDBDA3601AE7062578BCFE",
+        "windowExpiryHeight": 10351272
+      },
+      {
+        "index": 6,
+        "cosmos": "qor1ats744l6xqu3ne0jk67rl4wffhrkr0tl2qeect",
+        "evm": "0xeAE1EAD7Fa303919e5F2B6bC3fd5C94Dc761bd7F",
+        "note": "Already funded + PQC-registered; only the EVM window was reopened.",
+        "openWindowTxHash": "0FF3C836BE72154F921C141748641C00EA98C6BECF37994E468DA2E6F0E34782",
+        "windowExpiryHeight": 10351276
+      },
+      {
+        "index": 7,
+        "cosmos": "qor1cmm53hhfm0nky7slnlqm29f8xdmc6nlqr6rex2",
+        "evm": "0xC6F748DEE9DBe7627A1f9Fc1B5152733778D4Fe0",
+        "note": "Already funded + PQC-registered; only the EVM window was reopened.",
+        "openWindowTxHash": "63159F442F6B14D05D2FDB2231C56FB78A08B24F04679D1ADAFBD36B6A679FB3",
+        "windowExpiryHeight": 10351279
+      }
+    ],
+    "cycles": [
+      {
+        "receiptId": 1,
+        "senderIndex": 2,
+        "senderCosmos": "qor197ja9nv35em87saqfega0re36cadfdrjemgcn2",
+        "senderEvm": "0x2fA5d2CD91A6767f43A04e51d78F31D63AD4b472",
+        "patientAlias": "PASIEN FIKSI SM-002 \u2014 BUKAN DATA MEDIS ASLI",
+        "fictional": true,
+        "envelopeBytes": 2109,
+        "envelopeHash": "0x7fa87ceb7276ea9d1ef353fe1ce5b780414893bf4e70fbabaffa7a3cd0eaf251",
+        "docHash": "0x83b8af01b4fb5be07d3eec8d387eeb11ff9e194e07ca53bded76e801e6f38547",
+        "consentId": "0ec8d7ca-a4c4-457f-a06b-87223e1b5815",
+        "consentIdHash": "0xbb6eba8c87dfcb9b3c25dc91931ce00e165e2ccf24008d4e0aa0a13c1b8b6298",
+        "consentVerified": true,
+        "openRoundTripByteIdentical": true,
+        "logReferralTx": "0xe4ab335d7ac6c0678393e8e114acc4825feb6656289ee30d40b482cc0d9844e7",
+        "evmBlock": 10334032,
+        "txStatus": 1,
+        "storedReceiptVerified": true
+      },
+      {
+        "receiptId": 2,
+        "senderIndex": 3,
+        "senderCosmos": "qor1y5rrnzllmsd3xvfgkvz50l9508k9pa0h932fzw",
+        "senderEvm": "0x2506398BFFdC1B133128b30547fCb479EC50f5f7",
+        "patientAlias": "PASIEN FIKSI SM-003 \u2014 BUKAN DATA MEDIS ASLI",
+        "fictional": true,
+        "envelopeBytes": 2125,
+        "envelopeHash": "0x180680c5a188a4e1f8c42cdfdcdcd6fef210b1b3c1f3a15ce48d60f3474d0898",
+        "docHash": "0x42536d3c6554b5ddb064ab543f31e04b7069fede5858ce41ba3821b45f482681",
+        "consentId": "0302ebce-9706-464f-be58-58caa2f78615",
+        "consentIdHash": "0x940424a4ea044d87835a4be72d2acc3f76cade87da6816b58bbe934d019a89e2",
+        "consentVerified": true,
+        "openRoundTripByteIdentical": true,
+        "logReferralTx": "0x06c6467cc639358873459f31cc0b563a0c0ef0e14115eb95e570b7d7590fd0ac",
+        "evmBlock": 10334059,
+        "txStatus": 1,
+        "storedReceiptVerified": true
+      },
+      {
+        "receiptId": 3,
+        "senderIndex": 6,
+        "senderCosmos": "qor1ats744l6xqu3ne0jk67rl4wffhrkr0tl2qeect",
+        "senderEvm": "0xeAE1EAD7Fa303919e5F2B6bC3fd5C94Dc761bd7F",
+        "patientAlias": "PASIEN FIKSI SM-004 \u2014 BUKAN DATA MEDIS ASLI",
+        "fictional": true,
+        "envelopeBytes": 2117,
+        "envelopeHash": "0xd5e7b36c1a3adbeb978aef04d80f7c28836b00555101a8f2ed9449568308b3d5",
+        "docHash": "0xbf5eb87840e44bb06f176a00158b2bc553b12121340152036fe7048884e85ea9",
+        "consentId": "22a46412-da65-4f4d-9f21-f0ea14a3bf6f",
+        "consentIdHash": "0xa2d00d398a4fa17b47bdf9bcf95f9b55e00308bbefce85eea0fa67c39472cbf3",
+        "consentVerified": true,
+        "openRoundTripByteIdentical": true,
+        "logReferralTx": "0x4eb6b298d176b62659563a5d4a09a7dd09022d47fe452d504edf13179602c791",
+        "evmBlock": 10334069,
+        "txStatus": 1,
+        "storedReceiptVerified": true
+      },
+      {
+        "receiptId": 4,
+        "senderIndex": 7,
+        "senderCosmos": "qor1cmm53hhfm0nky7slnlqm29f8xdmc6nlqr6rex2",
+        "senderEvm": "0xC6F748DEE9DBe7627A1f9Fc1B5152733778D4Fe0",
+        "patientAlias": "PASIEN FIKSI SM-005 \u2014 BUKAN DATA MEDIS ASLI",
+        "fictional": true,
+        "envelopeBytes": 2106,
+        "envelopeHash": "0xed2d8cb7d9820b8e37a84077c3fc19062ca671302b89b458b75feb8d3aa206e5",
+        "docHash": "0xc81f6a6121bc8ef8cc2dfef58a937f1c65e8bc95509a3f3c47e960bc9143d3b7",
+        "consentId": "683584e6-824a-4428-b141-ce4fbee33365",
+        "consentIdHash": "0xafa5dae8c62ab74d248fe88d5746243336c3cfe56857041947070f0bcfc53ffb",
+        "consentVerified": true,
+        "openRoundTripByteIdentical": true,
+        "logReferralTx": "0x37a9ca7fc99a7237584ebe0f1024debb5355d4cab236e9065aa43530158e78e8",
+        "evmBlock": 10334077,
+        "txStatus": 1,
+        "storedReceiptVerified": true
+      }
+    ],
+    "finalReceiptsCount": 5,
+    "verification": "Independent re-read after the run: receiptsCount() = 5 via eth_call; receipts(0..4) all present with matching sender/recipient/hashes; all four logReferral tx receipts status 1, to = registry, from = the cycle sender."
+  }
+}

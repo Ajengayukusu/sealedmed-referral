@@ -137,6 +137,28 @@ exactly as `kemKeyCommitment` / `cardCommitment` in `src-core` define them.
 | Receipt logged on chain | `logReferral` tx `0x2dcbc2cd…b62e723`, block **10087356**; `receipts(0)` matches sender, recipient and all three hashes; `receiptsCount = 1` |
 | Doctor opens the envelope | `open()` with the doctor's own seal keys recovered the fictional document **byte-identical** to the original — the full loop closes off chain, the chain holds hashes only |
 
+### Additional referral cycles — 19 Nov 2026
+
+Four further complete cycles were executed through the same live registry,
+each from a **different sending clinic account**, each with its own fictional
+document (labelled FIKSI in the document itself), its own patient ML-DSA-87
+consent, and its own QoreSeal envelope sealed to the doctor's registered
+ML-KEM-1024 key (the recovered key was checked byte-identical against the
+chain KEM registry and against the registry's on-chain commitment before
+every cycle). In every cycle the doctor-side open recovered the plaintext
+byte-identical, and the stored receipt was read back and matched field by
+field. **`receiptsCount` is now 5.**
+
+| Receipt | Sender (EVM) | `logReferral` tx | Block |
+|---|---|---|---|
+| 1 | `0x2fA5d2CD91A6767f43A04e51d78F31D63AD4b472` | `0xe4ab335d7ac6c0678393e8e114acc4825feb6656289ee30d40b482cc0d9844e7` | 10334032 |
+| 2 | `0x2506398BFFdC1B133128b30547fCb479EC50f5f7` | `0x06c6467cc639358873459f31cc0b563a0c0ef0e14115eb95e570b7d7590fd0ac` | 10334059 |
+| 3 | `0xeAE1EAD7Fa303919e5F2B6bC3fd5C94Dc761bd7F` | `0x4eb6b298d176b62659563a5d4a09a7dd09022d47fe452d504edf13179602c791` | 10334069 |
+| 4 | `0xC6F748DEE9DBe7627A1f9Fc1B5152733778D4Fe0` | `0x37a9ca7fc99a7237584ebe0f1024debb5355d4cab236e9065aa43530158e78e8` | 10334077 |
+
+Full per-cycle hashes (envelope, document, consent) are recorded in
+`deployments.testnet.json` under `evidenceDeepening2026-11-19`.
+
 ## Run it
 
 ```bash
