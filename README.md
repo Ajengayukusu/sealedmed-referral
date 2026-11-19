@@ -159,6 +159,36 @@ field. **`receiptsCount` is now 5.**
 Full per-cycle hashes (envelope, document, consent) are recorded in
 `deployments.testnet.json` under `evidenceDeepening2026-11-19`.
 
+### Second recipient + five more cycles — 19 Nov 2026 (upgrade round)
+
+A **second recipient facility** was onboarded end-to-end: fresh account,
+ML-DSA-87 key registered as its first transaction, a fresh QoreSeal identity
+(new random seed, ML-KEM-1024 key registered natively — read back from the
+chain byte-identical), recipient card verified against the on-chain
+registered keys (`openRecipient`), then `registerRecipient` on the live
+registry (tx `0xe74c0db0…3d43136`; `isActiveRecipient` reads back `true`).
+Five further complete referral cycles were then logged **to this new
+recipient**, each from a sender account never used for a receipt before,
+each with its own fictional FIKSI-labelled document, patient ML-DSA-87
+consent (verified), doctor-side open recovered byte-identical, and the
+stored receipt read back and matched. **`receiptsCount` is now 10**
+(independently re-read via `eth_call` after the round; receipts 5–9 below).
+
+| Receipt | Sender (EVM) | `logReferral` tx | Block |
+|---|---|---|---|
+| 5 | `0x47c5AfcB38877Fad7c2EA6c78778E3dAD03Fe629` | `0xc2f31c391b22ec558e073c0d29bc47122e8179b1646c82d11bb71e75c2dc3446` | 10364713 |
+| 6 | `0xe1967A7a0c78F7f8ED74d817e66aa29ed43B8775` | `0x220b3aa9971c2e8272c0d736206620672e0c9546fed4444ddb8b9dcc810cda2b` | 10364718 |
+| 7 | `0x26089054Dbe962E4d20241E17361DA5711afE813` | `0x77a7876c49f1aaca88fd42ab71c61eec3bbdd790a6fd7b4c0604f17c10f0b1b1` | 10364720 |
+| 8 | `0x0b13662EfFa17C617e0d15b0A6478Dd9405E24ef` | `0xcfeebe2bfe01999316b78d05eedcf45fc07e10d67c8bb86516382e8d790e938f` | 10364724 |
+| 9 | `0x510caCB6dAbE48D06C369C230fF8f0F020589940` | `0x4389eef5237df2b0bb668df5b873e60b69106099d4db5a3c370dad604f0a3d74` | 10364728 |
+
+Recipient (doctor2): cosmos `qor16eqy7j9x5dyqh9j2l3v3ulkjrq050m3xq4jnya`,
+EVM `0xD6404F48A6A3480b964afC591E7ED2181F47ee26`, ML-KEM-1024 registration
+tx `CE923B2B…F9674B`, `kemKeyHash`
+`0x9d43432bf0c73319a424dda68592a6f26992d8b9d8928f4d6d3552f040cadeb4`.
+Full per-cycle hashes are recorded in `deployments.testnet.json` under
+`evidenceDeepeningRound2_2026-11-19`.
+
 ## Run it
 
 ```bash

@@ -77,7 +77,7 @@
       "usedTxs": "2/3"
     }
   },
-  "receiptsCountTotal": 5,
+  "receiptsCountTotal": 10,
   "evidenceDeepening2026-11-19": {
     "purpose": "Deepen the on-chain footprint: four additional genuine referral cycles through the live registry, each from a different sending clinic account. All documents FICTIONAL and labelled FIKSI in the document itself.",
     "date": "2026-11-19",
@@ -200,5 +200,111 @@
     ],
     "finalReceiptsCount": 5,
     "verification": "Independent re-read after the run: receiptsCount() = 5 via eth_call; receipts(0..4) all present with matching sender/recipient/hashes; all four logReferral tx receipts status 1, to = registry, from = the cycle sender."
+  },
+  "evidenceDeepeningRound2_2026-11-19": {
+    "purpose": "Second evidence-deepening round (upgrade, 19 Nov 2026): a NEW recipient facility (doctor2) was registered end-to-end and five further genuine referral cycles were logged to it, from five sender accounts never used for a receipt before (idx8, idx9, idx10, idx11, idx12). All documents FICTIONAL and labelled FIKSI.",
+    "newRecipient": {
+      "index": 13,
+      "cosmos": "qor16eqy7j9x5dyqh9j2l3v3ulkjrq050m3xq4jnya",
+      "evm": "0xD6404F48A6A3480b964afC591E7ED2181F47ee26",
+      "note": "Fresh facility identity: ML-DSA-87 key registered as its first tx (DF91899DB174B172FFB65D8D9CB9938832C150AC7B81BE7DD2D3EE1CD056A36D), fresh EVM window (F4C564278DDEF2506A89AE2DE17F739E3304D66D45836D85E89F71E5670A6A30), QoreSeal keys generated fresh from a new random seed held only in the team's local .secrets folder.",
+      "kemRegisterTxHash": "CE923B2B0819C123F14274E32A27E2BA65942E1FF56A3EFB4CD85C1830F9674B",
+      "kemKeyHash": "0x9d43432bf0c73319a424dda68592a6f26992d8b9d8928f4d6d3552f040cadeb4",
+      "kemReadback": "fetchKemKey: found, algorithmId 2 (ML-KEM-1024), public key byte-identical to the generated key (1568 bytes).",
+      "cardHash": "0xdf72600b152a3cb17aa76d36169102f36f2b189078951db978458a2ba2d1e76d",
+      "cardVerification": "openRecipient passed against the on-chain registered ML-DSA-87 + ML-KEM-1024 keys before registration and again before every cycle.",
+      "registerRecipientTx": "0xe74c0db080c036e9549002988514754e10521a430ae68e5fba79312453d43136",
+      "activeAfter": true
+    },
+    "senderPreparation": [
+      {
+        "index": 10,
+        "cosmos": "qor1ycyfq4xma93wf5szg8shxcw62ug6l6qn9apdv6",
+        "evm": "0x26089054Dbe962E4d20241E17361DA5711afE813",
+        "fundTxHash": "5B1D04E1A72A0B258EDFB69EF1C82B2DB06DA08A551452CF6844E7F21D8C96A7",
+        "registerPqcTxHash": "7CD0B499C57B9FAF49D026BEA22C632B67112964081F022374CAE6F7C85F527B",
+        "openWindowTxHash": "CC4AD7A38A4AF6885A1CDEE0E2C6905F47A26EDBDC22A4E6AA28896F60164B4E"
+      },
+      {
+        "index": 11,
+        "cosmos": "qor1pvfkvthl597xzlsdzkc2v3udm9q9uf80egeq0s",
+        "evm": "0x0b13662EfFa17C617e0d15b0A6478Dd9405E24ef",
+        "fundTxHash": "693D421786E6A26D16E650E25E1F8DF9260DD8E3B332A1C589CC6F3382CB7A48",
+        "registerPqcTxHash": "CA4B14A3D30870EDD76067D1F6A1B9A1FA28866919CA386B497582E043C5922B",
+        "openWindowTxHash": "C3117C4273911A75DF0CB556C802BC41E5CDFF8F451A469C3895242EAEA17B5F"
+      },
+      {
+        "index": 12,
+        "cosmos": "qor12yx2edk6heydqmpkns3sl78s7qs93x2qstdg8e",
+        "evm": "0x510caCB6dAbE48D06C369C230fF8f0F020589940",
+        "fundTxHash": "0A299E020D81F94937031CB9773EB61B83B0BA6386BE292D4F2B1CE498043DA7",
+        "registerPqcTxHash": "7A91E0B9D039CC291A925C7884D606845D3C052254B06FEA1DE03C4BF05BF9C9",
+        "openWindowTxHash": "251A0E806074BFC3665A5774A63524D3FCFD984C833DA2C949159446E7C8BCBA"
+      }
+    ],
+    "cycles": [
+      {
+        "receiptId": 5,
+        "senderIndex": 8,
+        "senderEvm": "0x47c5AfcB38877Fad7c2EA6c78778E3dAD03Fe629",
+        "patientAlias": "PASIEN FIKSI SM-18",
+        "envelopeHash": "0xab2f5924732592763958c04770896bc755cd44f122268aad1c3eb1e0557453a9",
+        "docHash": "0x462b96d16d6d1d1ad66608cce0b1e62e6fc10d0fd2796a1679965d3b90678080",
+        "consentIdHash": "0x16497bbfba95cf87f70bf978fdf626c9e98687409b57f2a38cfc70ce0f587ccc",
+        "logReferralTx": "0xc2f31c391b22ec558e073c0d29bc47122e8179b1646c82d11bb71e75c2dc3446",
+        "evmBlock": 10364713,
+        "txStatus": 1
+      },
+      {
+        "receiptId": 6,
+        "senderIndex": 9,
+        "senderEvm": "0xe1967A7a0c78F7f8ED74d817e66aa29ed43B8775",
+        "patientAlias": "PASIEN FIKSI SM-19",
+        "envelopeHash": "0x1230aff9e4fefae316014920019a91a7e9d1508e285fbe254f10ac673bc44ee6",
+        "docHash": "0x4df67d941659e1db184b5a31b9c863dfcf6f9fe004de4aa0c8f6d27f1b3828ed",
+        "consentIdHash": "0x14811011aad53fc485d13a98396fee0e8aa8efba11057bef32b6e0964c23c13e",
+        "logReferralTx": "0x220b3aa9971c2e8272c0d736206620672e0c9546fed4444ddb8b9dcc810cda2b",
+        "evmBlock": 10364718,
+        "txStatus": 1
+      },
+      {
+        "receiptId": 7,
+        "senderIndex": 10,
+        "senderEvm": "0x26089054Dbe962E4d20241E17361DA5711afE813",
+        "patientAlias": "PASIEN FIKSI SM-110",
+        "envelopeHash": "0x3a42721b67d31393e17bb92d8ae41738bc8a3d3e35385a6be0ea7b8639723454",
+        "docHash": "0xe6adbe5e9e9fd821b7bef735ce7d3823279fcb684a9538dd84cf347cfa8f1925",
+        "consentIdHash": "0x4ebc782011dfb8d02c08210994799c1eaae996957f5535a4a9df0308c948f6a6",
+        "logReferralTx": "0x77a7876c49f1aaca88fd42ab71c61eec3bbdd790a6fd7b4c0604f17c10f0b1b1",
+        "evmBlock": 10364720,
+        "txStatus": 1
+      },
+      {
+        "receiptId": 8,
+        "senderIndex": 11,
+        "senderEvm": "0x0b13662EfFa17C617e0d15b0A6478Dd9405E24ef",
+        "patientAlias": "PASIEN FIKSI SM-111",
+        "envelopeHash": "0x89b47af3cbe279294cf05c5dfcfb6d2c178df82d4231aa8663a0c8d8f6573b65",
+        "docHash": "0xf23ee031b0f038f53e7b107c1a115717496cf9f1616c836e0192b9c93e1977c5",
+        "consentIdHash": "0x37c20162da376325d91dabe8b1b7a6806bff874d92e01e7cabef6fdb1863fc3b",
+        "logReferralTx": "0xcfeebe2bfe01999316b78d05eedcf45fc07e10d67c8bb86516382e8d790e938f",
+        "evmBlock": 10364724,
+        "txStatus": 1
+      },
+      {
+        "receiptId": 9,
+        "senderIndex": 12,
+        "senderEvm": "0x510caCB6dAbE48D06C369C230fF8f0F020589940",
+        "patientAlias": "PASIEN FIKSI SM-112",
+        "envelopeHash": "0x06ee36d5cec6c116c0c2566cc1420821ec4936d0860f2b25d0530cd3d341a947",
+        "docHash": "0x5a4d212be60cfbc134ed49941bb53bcbe390af41238118c976b387345bfcdfc2",
+        "consentIdHash": "0xb1d2598f8ee904a2ca11959e8ca99482861ad5c9c506ed39ab9be5619e5892ed",
+        "logReferralTx": "0x4389eef5237df2b0bb668df5b873e60b69106099d4db5a3c370dad604f0a3d74",
+        "evmBlock": 10364728,
+        "txStatus": 1
+      }
+    ],
+    "finalReceiptsCount": 10,
+    "verification": "Every cycle: consent verifyConsent true, doctor open round-trip byte-identical, stored receipt re-read and matched. Independent eth_call after the round: receiptsCount() = 10, receipts(5..9) all present with the senders above -> doctor2, isActiveRecipient(doctor2) = true."
   }
 }
