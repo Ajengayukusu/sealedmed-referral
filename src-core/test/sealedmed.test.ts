@@ -194,7 +194,13 @@ describe("SealedMed core crypto (real @qorechain/qoreseal + @qorechain/pqc)", ()
       envelopeHash: sealed.envelopeHash,
       nowSeconds: 1_800_000_000,
     });
-    const forged = { ...consent, signature: consent.signature.replace(/^../, "ff") };
+    // Flip the first signature byte deterministically: ML-DSA-87 signing is
+    // randomised, so a fixed "ff" replacement is a no-op (and the test fails)
+    // whenever the first byte already happens to be 0xff (1/256 per run).
+    const firstByte = consent.signature.slice(0, 2);
+    const forgedSig = (firstByte === "ff" ? "00" : "ff") + consent.signature.slice(2);
+    assert.notEqual(forgedSig, consent.signature);
+    const forged = { ...consent, signature: forgedSig };
     assert.equal(
       verifyConsent(
         forged,
