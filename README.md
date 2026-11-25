@@ -4,7 +4,7 @@
 
 **Live demo:** https://ajengayukusu.github.io/sealedmed-referral/
 
-**Demo video (≤ 3 min):** https://www.youtube.com/watch?v=6s3jO9qPiJM
+**Demo video (≤ 3 min):** https://www.youtube.com/watch?v=bwr5sxa7ELM
 
 > **Rujukan medis & hasil lab yang tetap rahasia selama puluhan tahun — dienkripsi
 > ML-KEM-1024 di browser, terikat ML-DSA-87, dengan receipt hash-only on-chain.**
